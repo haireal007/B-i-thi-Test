@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu2</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let arr1 = [2, 3, 4, 5, 6, 7, 8, 3, 3];
+    let arr2 = [];
+    let index = prompt("index", "");
+
+    function tryRemoveFromArray(arr, index) {
+        if (index > arr.length) {
+            return arr;
+        } else {
+            for (let i = 0; i < arr.length-1; i++) {
+                if (i < index){
+                    arr2[i] = arr[i];
+                }
+              else {
+                    arr2[i] = arr[i + 1];
+                }
+            }
+            return arr2;
+        }
+    }
+
+    console.log(tryRemoveFromArray(arr1, index))
+</script>

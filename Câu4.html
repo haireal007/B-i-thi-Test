@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<canvas id="HCN" width="1000px" height="1000px" style="border: 1px solid #a3a3a3">
+</canvas>
+</body>
+</html>
+<script>
+    class Rectangle {
+        x;
+        y;
+        widths;
+        heights;
+        color;
+        constructor(x, y, widths, heights, color) {
+            this.x = x;
+            this.y = y;
+            this.heights = heights;
+            this.widths = widths;
+            this.color = color;
+        }
+
+        render() {
+            var ctx = document.getElementById('HCN').getContext('2d');
+            ctx.fillStyle = this.color;
+            return ctx.fillRect(this.x, this.y, this.widths, this.heights);
+        }
+    }
+    var rectangle = new Rectangle(10, 10, 200, 100, "#000000");
+    rectangle.render();
+</script>
